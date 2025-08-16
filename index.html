@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Engagement Invitation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f4f0;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1509043759401-136742328bb3?auto=format&fit=crop&w=1200&q=80') no-repeat center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+    }
+    header h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 4rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin-top: 10px;
+    }
+    section {
+      padding: 50px 20px;
+    }
+    h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #008080;
+      margin-bottom: 20px;
+    }
+    .greetings p, .invitation p, .families p, .blessings p, .program p, .closing p {
+      font-size: 1.2rem;
+      margin: 8px 0;
+    }
+    .program ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+    .program ul li {
+      margin: 10px 0;
+    }
+    footer {
+      background: #008080;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Muskan ❤️ Shahrukh</h1>
+    <p>Engagement Ceremony (Sagai)</p>
+    <p class="countdown" id="countdown"></p>
+  </header>
+
+  <!-- Greetings -->
+  <section class="greetings">
+    <h2>Greetings</h2>
+    <p>As-Salamu Alaikum Wa Rahmatullahi Wa Barakatuh</p>
+    <p>Peace and blessings of Allah be upon you and your family.</p>
+    <p>It gives us immense joy to invite you to a blessed occasion.</p>
+  </section>
+
+  <!-- Event Details -->
+  <section class="details">
+    <h2>Event Details</h2> 
+    <p><strong>Date:</strong> 17th August 2025</p>
+    <p><strong>Time:</strong> 11:35 AM onwards</p>
+    <p><strong>Venue:</strong> Tamboli Galli, Wangi No.3</p>
+    <a href="https://www.google.com/maps/place/18%C2%B011'54.7%22N+75%C2%B009'03.2%22E/@18.198522,75.1502523,19z/data=!3m1!4b1!4m4!3m3!8m2!3d18.198522!4d75.150896?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍 View Location</a>
+  </section>
+
+  <!-- Invitation Message -->
+  <section class="invitation">
+    <h2>Bismillahir Rahmanir Raheem</h2>
+    <p>In the name of Allah, the Most Beneficent, the Most Merciful</p>
+    <p>Alhamdulillah! With the blessings of Almighty Allah,</p>
+    <p>we cordially invite you to the Engagement Ceremony of</p>
+    <p><strong>Muskan & Shahrukh</strong></p>
+    <p>Your presence and du‘as will make the occasion more special.</p>
+  </section>
+
+  <!-- Family Section -->
+  <section class="families">
+    <h2>Hosted By</h2>
+    <p>Mr. Ahamad Tamboli (Bride’s Parents)</p>
+    <p>Mr. Rahim Tamboli (Groom’s Parents)</p>
+  </section>
+
+  <!-- Blessings Section -->
+  <section class="blessings">
+    <h2>Dua & Blessings</h2>
+    <p>“And We created you in pairs” – (Surah An-Naba 78:8)</p>
+    <p>We humbly request your presence, blessings, and prayers</p>
+    <p>for this new journey of Muskan & Shahrukh.</p>
+  </section>
+
+  <!-- Program Schedule -->
+  <section class="program">
+    <h2>Program Schedule</h2>
+    <ul>
+      <li>💍 Ring Ceremony – 11:35 AM</li>
+    </ul>
+  </section>
+
+  <!-- Closing Note -->
+  <section class="closing">
+    <h2>Looking Forward</h2>
+    <p>We eagerly await your presence to bless this occasion.</p>
+    <p>May Allah bless this union with love and happiness.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>With duas, Muskan & Shahrukh</p>
+    <p>📞 Contact: +91 74998 94346</p>
+  </footer>
+
+  <!-- Countdown Script -->
+  <script>
+    const countdown = document.getElementById("countdown");
+    const eventDate = new Date("Aug 17, 2025 11:35:00").getTime();
+
+    setInterval(function() {
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+  </script>
+
+</body>
+</html>
